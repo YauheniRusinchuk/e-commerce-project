@@ -4,7 +4,9 @@ import Product from './Product'
 
 function ProductList() {
     return(
-        <Product />
+        <div className='product_list'>
+            <Product />
+        </div>
     )
 }
 
