@@ -13,7 +13,6 @@ export default function(state = initialState, action) {
                 ...state,
                 isLoading: true
             }
-            break;
         case PRODUCTS_LOAD:
             return {
                 ...state,

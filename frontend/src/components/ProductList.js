@@ -2,10 +2,20 @@ import React from 'react'
 import Product from './Product'
 
 
-function ProductList() {
+function ProductList({products}) {
+
     return(
         <div className='product_list'>
-            <Product />
+            {products.map(product => {
+                return (
+                    <Product
+                        key={product.id}
+                        title={product.title}
+                        photo={product.photo}
+                        price={product.price}
+                    />
+                )
+            })}
         </div>
     )
 }

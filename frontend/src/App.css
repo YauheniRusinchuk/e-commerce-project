@@ -18,6 +18,8 @@ body {
     position: fixed;
     left: 0;
     top:0;
+    background-color: white;
+    z-index: 10;
 }
 
 .header_container a {
@@ -45,7 +47,49 @@ body {
 
 .product_list {
     margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
 }
+
+.product_list .product_item {
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border-radius: 3px;
+    margin: 10px;
+    box-shadow: none;
+    transition-property: box-shadow;
+    transition-duration: 0.4s;
+}
+
+.product_list .product_item:hover {
+    box-shadow: 0 3px 10px #e6e6e6;
+}
+
+.product_list .product_item .product_item_price {
+    color: #292828;
+    text-align: right;
+    font-size: 12px;
+}
+
+.product_list .product_item .product_item_title {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+
+
+.product_list .product_item img {
+    width: 100%;
+    height: 300px;
+    background-position: center;
+}
+
+
+
 
 
 .my_card_container {
@@ -59,4 +103,33 @@ body {
 .notfound_container {
     padding: 10px;
     text-align: center;
+}
+
+
+
+.loader .lds-dual-ring {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  margin-top: 50px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 26px;
+  height: 26px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 3px solid #ccdbde;
+  border-color: #ccdbde transparent #ccdbde transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
