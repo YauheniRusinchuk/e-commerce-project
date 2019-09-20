@@ -29,6 +29,25 @@ body {
     font-weight: bold;
 }
 
+.header_container .header_home a {
+    display: flex;
+    align-items: center;
+}
+
+.header_container .header_home a img {
+    margin-right: 5px;
+}
+
+.header_container .my_cart a {
+    display: flex;
+    align-items: center;
+}
+
+.header_container .my_cart a img {
+    margin-left: 5px;
+}
+
+
 .main_container {
     margin: 60px auto;
 }
@@ -65,7 +84,7 @@ body {
 }
 
 .product_list .product_item:hover {
-    box-shadow: 0 3px 10px #e6e6e6;
+    box-shadow: 0 0 10px #e6e6e6;
 }
 
 .product_list .product_item .product_item_price {
