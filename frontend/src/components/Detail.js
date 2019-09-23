@@ -1,10 +1,22 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import {useSelector} from 'react-redux'
 
+function Detail(props) {
 
-export const Detail = () => {
-    return(
+    const products = useSelector(state => ({
+        products: state.products.products,
+    }))
+
+    useEffect(()=> {
+        const obj = products.products.filter(item => item.id == props.match.params.id)
+    })
+    
+
+    return (
         <div>
-            <h1>DETAIL PAGE</h1>
+            <p>DETAIL</p>
         </div>
     )
 }
+
+export default Detail;

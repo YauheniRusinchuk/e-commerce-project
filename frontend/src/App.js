@@ -7,7 +7,7 @@ import Home from './components/Home'
 import Cart from './components/Cart'
 import {useDispatch} from 'react-redux'
 import {getProducts} from './actions/products'
-import {Detail} from './components/Detail'
+import Detail from './components/Detail'
 // import 'bootstrap/dist/css/bootstrap.min.css'
 
 
