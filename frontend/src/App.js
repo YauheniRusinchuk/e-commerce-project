@@ -7,6 +7,7 @@ import Home from './components/Home'
 import Cart from './components/Cart'
 import {useDispatch} from 'react-redux'
 import {getProducts} from './actions/products'
+import {Detail} from './components/Detail'
 // import 'bootstrap/dist/css/bootstrap.min.css'
 
 
@@ -25,6 +26,7 @@ function App() {
                 <Switch>
                     <Route exact path='/' component={Home} />
                     <Route path='/mycard' component={Cart} />
+                    <Route path='/detail:id' component={Detail} />
                     <Route component={NotFound} />
                 </Switch>
             </div>

@@ -13,6 +13,7 @@ function ProductList({products}) {
                         title={product.title}
                         photo={product.photo}
                         price={product.price}
+                        id={product.id}
                     />
                 )
             })}
