@@ -1,9 +1,13 @@
 import React, {useEffect, useState } from 'react'
-import {useSelector} from 'react-redux'
+import {useSelector, useDispatch} from 'react-redux'
 import {Loading} from './Loading'
+import {addToCart} from '../actions/cart'
+
 
 function Detail(props) {
 
+
+    const dispatch = useDispatch();
     const [product, setProduct] = useState();
 
     const products = useSelector(state => ({
@@ -15,6 +19,12 @@ function Detail(props) {
         setProduct(obj[0])
     },[])
 
+    function handleAdd(id) {
+        dispatch(addToCart(id))
+
+    }
+
+
     return (
         <div className='detail_container'>
             {product ? (
@@ -22,7 +32,7 @@ function Detail(props) {
                     <p>{product.title}</p>
                     <p>{product.description}</p>
                     <img src={product.photo} alt='name_photo' /><br/>
-                    <button>ДОБАВИТЬ В КОРЗИНУ</button>
+                    <button onClick={()=> handleAdd(product.id)} >ДОБАВИТЬ В КОРЗИНУ</button>
                 </div>
             ): <Loading />}
         </div>

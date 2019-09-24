@@ -1,2 +1,4 @@
 export const PRODUCTS_LOADING = "PRODUCTS_LOADING"
 export const PRODUCTS_LOAD = "PRODUCTS_LOAD"
+export const ADD_TO_CART = "ADD_TO_CART"
+export const LOAD_CART = "LOAD_CART"
