@@ -24,6 +24,8 @@ function CartView ({products}) {
                     </div>
                 )
             })}
+
+            <button className='btn_order'>ОФОРМИТЬ ЗАКАЗ</button>
         </div>
     )
 }
