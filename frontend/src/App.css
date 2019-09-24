@@ -191,3 +191,37 @@ body {
     width: 60%;
     margin: 20px auto;
 }
+
+.cartview_item {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cartview_item a {
+    text-decoration: none;
+    font-size: 10px;
+    color: #292828;
+    font-weight: bold;
+}
+
+.cartview_item span {
+    font-size: 10px;
+}
+
+.cartview_item button {
+    background-color: red;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    border: 1px solid red;
+    padding: 3px 10px;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}

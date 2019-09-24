@@ -9,12 +9,10 @@ function Cart() {
         mycars: state.carts.carts
     }))
 
-    console.log(carts.mycars)
-
     return(
         <div className='my_card_container'>
             {carts.mycars.length ? (
-                <CartView />
+                <CartView products={carts.mycars} />
             ) : <p>У ВАС ПОКА НЕТУ НИЧЕГО В КОРЗИНЕ</p>}
         </div>
     )
