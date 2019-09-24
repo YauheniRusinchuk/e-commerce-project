@@ -1,5 +1,6 @@
 import {
-    ADD_TO_CART
+    ADD_TO_CART,
+    DELETE_PRODUCT_IN_CART
 } from './Actiontypes';
 
 
@@ -14,4 +15,13 @@ export const addToCart = (id) => (dispatch, getState) => {
             })
         }
     })
+}
+
+
+
+export const deleteProductInCart = id => (dispatch, getState) => {
+      dispatch({
+        type: DELETE_PRODUCT_IN_CART,
+        payload: id
+      });
 }

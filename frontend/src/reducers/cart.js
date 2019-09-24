@@ -1,4 +1,4 @@
-import {LOAD_CART, ADD_TO_CART} from '../actions/Actiontypes'
+import {LOAD_CART, ADD_TO_CART, DELETE_PRODUCT_IN_CART} from '../actions/Actiontypes'
 
 
 const initialState = {
@@ -17,6 +17,12 @@ export default function(state = initialState, action) {
             return {
                 ...state,
                 carts: [...state.carts, action.payload]
+            }
+
+        case DELETE_PRODUCT_IN_CART:
+            return {
+                ...state,
+                carts: state.carts.filter(product => product.id !== action.payload)
             }
         default:
             return state;
