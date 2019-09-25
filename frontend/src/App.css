@@ -237,3 +237,77 @@ body {
     outline: none;
     cursor: pointer;
 }
+
+
+.modal_order {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #e6e6e6;
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+}
+
+.modal_order_body {
+    padding: 3rem;
+    width: 400px;
+    border-radius: 5px;
+    background: white;
+    height: 200px;
+    text-align: center;
+}
+
+.modal_order_body p {
+    font-size: 12px;
+    font-weight: bold;
+    color: #292828;
+}
+
+.modal_order_body p span {
+    font-size: 16px;
+    color: green;
+}
+
+.modal_order_body form {
+    text-align: center;
+}
+
+.modal_order_body form input {
+    width: 300px;
+    padding: 3px;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    outline: none;
+    margin: 10px;
+}
+
+.modal_order_body .btn_complite {
+    background-color: green;
+    padding: 5px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.modal_order_body .btn_close {
+    background-color: red;
+    padding: 5px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}

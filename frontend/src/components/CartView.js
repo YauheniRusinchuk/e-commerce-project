@@ -1,9 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import {deleteProductInCart} from '../actions/cart'
 import {useDispatch} from 'react-redux'
+import OrderModal from './Order'
 
 function CartView ({products}) {
+
+    const [isOrder, setOrder] = useState(false);
 
     const dispatch = useDispatch();
 
@@ -24,8 +27,8 @@ function CartView ({products}) {
                     </div>
                 )
             })}
-
-            <button className='btn_order'>ОФОРМИТЬ ЗАКАЗ</button>
+            {isOrder && <OrderModal closeModal={()=> setOrder(false)} />}
+            <button className='btn_order' onClick={()=> setOrder(true)}>ОФОРМИТЬ ЗАКАЗ</button>
         </div>
     )
 }

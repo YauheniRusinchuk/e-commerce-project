@@ -43,7 +43,7 @@ function Detail(props) {
                     <p>{product.title}</p>
                     <p>{product.description}</p>
                     <img src={product.photo} alt='name_photo' /><br/>
-                    {check ? <span style={{color: 'green', fontSize: "12px"}}>Этот товар уже есть в корзине</span> : <button onClick={()=> handleAdd(product.id)} >ДОБАВИТЬ В КОРЗИНУ</button> }
+                    {check ? <span style={{color: 'green', fontSize: "12px", fontWeight: "bold"}}>Товар в корзине</span> : <button onClick={()=> handleAdd(product.id)} >ДОБАВИТЬ В КОРЗИНУ</button> }
                 </div>
             ): <Loading />}
         </div>
