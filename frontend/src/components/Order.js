@@ -24,12 +24,24 @@ function OrderModal({closeModal}) {
         setValue(money)
     }
 
+    function listId() {
+        let result = []
+        carts.mycars.forEach(cart => {
+            result.push(cart.id)
+        })
+        return result
+    }
 
-    function orderSubmit(e) {
+    async function orderSubmit(e) {
         e.preventDefault();
-        console.log(name)
-        console.log(nubmer)
-        console.log(value)
+        const cartsId = await listId();
+        const data = {
+            name,
+            nubmer,
+            cartsId,
+            value
+        }
+        console.log(data)
     }
 
 
