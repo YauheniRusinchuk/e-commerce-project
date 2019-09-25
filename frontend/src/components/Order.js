@@ -25,11 +25,19 @@ function OrderModal({closeModal}) {
     }
 
 
+    function orderSubmit(e) {
+        e.preventDefault();
+        console.log(name)
+        console.log(nubmer)
+        console.log(value)
+    }
+
+
     return (
         <div className='modal_order'>
             <div className='modal_order_body'>
             <p>Подтвердите заказ пожалуйста либо отмените.</p>
-                <form>
+                <form onSubmit={orderSubmit}>
                     <p>Ваша общая покупка на цену <span>{value} $</span></p>
                     <input value={name} onChange={e => setName(e.target.value)} type='text' placeholder="Как ваше имя? " />
                     <input value={nubmer} onChange={e => setNubmer(e.target.value)} type='text' placeholder='Ваш номер телефона?' />
