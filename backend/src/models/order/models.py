@@ -4,8 +4,8 @@ from src.models.product.models import Product
 class Order(models.Model):
 
     STATE = [
-        (1, 'Не подтвержденно'),
-        (2, 'Подтвержденно'),
+        ('N', 'Не подтвержденно'),
+        ('Y', 'Подтвержденно'),
     ]
 
 
@@ -14,9 +14,9 @@ class Order(models.Model):
     price           = models.IntegerField()
     list_products   = models.ManyToManyField(Product)
     status          = models.CharField(
-        max_length=2,
+        max_length=255,
         choices=STATE,
-        default=1,
+        default='N',
     )
 
 
