@@ -290,7 +290,7 @@ body {
 .modal_order_body .btn_complite {
     background-color: green;
     padding: 5px 20px;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
     color: white;
     border: none;
@@ -303,7 +303,7 @@ body {
 .modal_order_body .btn_close {
     background-color: red;
     padding: 5px 20px;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
     color: white;
     border: none;
@@ -311,4 +311,20 @@ body {
     outline: none;
     cursor: pointer;
     margin-bottom: 10px;
+}
+
+.footer_container {
+    width: 100%;
+    height: 200px;
+    background-color: #e6e6e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_container a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #292828;
+    font-weight: bold;
 }

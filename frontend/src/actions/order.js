@@ -18,7 +18,9 @@ export const createOrder = (data) => (dispatch, getState) => {
             payload: res.data
         });
     })
-    .catch(err =>
-        console.log(err.response)
+    .catch(err => {
+         console.log(err)
+         dispatch({type: ERROR_CREATE_ORDER})
+        }
      );
 };
