@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react'
-import {useSelector} from 'react-redux'
+import {useSelector, useDispatch} from 'react-redux'
+import {createOrder} from '../actions/order'
 
 
 function OrderModal({closeModal}) {
 
+    const dispatch = useDispatch();
     const [value, setValue] = useState(0)
     const [name, setName] = useState('')
     const [nubmer, setNubmer] = useState('')
@@ -15,6 +17,8 @@ function OrderModal({closeModal}) {
     useEffect(()=> {
         total();
     })
+
+
 
     function total() {
         let money = 0;
@@ -41,7 +45,7 @@ function OrderModal({closeModal}) {
             cartsId,
             value
         }
-        console.log(data)
+        dispatch(createOrder(data))
     }
 
 
