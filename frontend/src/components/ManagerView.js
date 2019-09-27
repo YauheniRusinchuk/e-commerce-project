@@ -1,6 +1,7 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {Redirect} from 'react-router-dom'
 import {useSelector,useDispatch} from 'react-redux'
+import {loadOrder} from '../actions/order'
 import {logout} from '../actions/auth'
 
 
@@ -14,11 +15,13 @@ function ManagerView({user}) {
         e.preventDefault();
         dispatch(logout());
         setLogout(true)
+
     }
 
     const isAuth = useSelector(state => ({
-        auth: state.auth
+        auth: state.auth,
     }))
+
 
     return (
         <div className='managerview'>

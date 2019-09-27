@@ -11,6 +11,7 @@ import Detail from './components/Detail'
 import Manager from './components/Manager'
 import Login from './components/Auth'
 import {loadUser} from './actions/auth'
+import {loadOrder} from './actions/order'
 // import 'bootstrap/dist/css/bootstrap.min.css'
 
 
@@ -21,6 +22,7 @@ function App() {
     useEffect(()=> {
         dispatch(getProducts());
         dispatch(loadUser());
+        dispatch(loadOrder());
     })
 
     return (
