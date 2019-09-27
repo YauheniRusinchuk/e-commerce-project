@@ -41,7 +41,16 @@ INSTALLED_APPS = [
     'src.models.order',
     'rest_framework',
     'corsheaders',
+    'knox',
 ]
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'knox.auth.TokenAuthentication',
+    ),
+}
+
 
 
 CORS_ORIGIN_WHITELIST = (

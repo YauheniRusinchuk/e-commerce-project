@@ -8,6 +8,9 @@ import Cart from './components/Cart'
 import {useDispatch} from 'react-redux'
 import {getProducts} from './actions/products'
 import Detail from './components/Detail'
+import Manager from './components/Manager'
+import Login from './components/Auth'
+import {loadUser} from './actions/auth'
 // import 'bootstrap/dist/css/bootstrap.min.css'
 
 
@@ -17,6 +20,7 @@ function App() {
 
     useEffect(()=> {
         dispatch(getProducts());
+        dispatch(loadUser());
     })
 
     return (
@@ -27,7 +31,10 @@ function App() {
                     <Route exact path='/' component={Home} />
                     <Route path='/mycard' component={Cart} />
                     <Route path='/detail:id' component={Detail} />
+                    <Route path='/login' component={Login} />
+                    <Route path='/manager' component={Manager} />
                     <Route component={NotFound} />
+
                 </Switch>
             </div>
           </BrowserRouter>

@@ -328,3 +328,42 @@ body {
     color: #292828;
     font-weight: bold;
 }
+
+.login_container {
+    width: 50%;
+    margin: 100px auto;
+    text-align: center;
+    background-color: white;
+    border-radius: 3px;
+    padding: 20px;
+}
+
+.login_container p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.login_container form input {
+    margin: 10px;
+    border: 1px solid grey;
+    border-radius: 2px;
+    padding: 5px;
+    outline: none;
+    font-size: 12px;
+}
+
+.login_container form button {
+    padding: 5px 20px;
+    background-color: green;
+    font-size: 12px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    color: white;
+    border-radius: 2px;
+}
+
+.manager_container {
+    text-align: center;
+}
