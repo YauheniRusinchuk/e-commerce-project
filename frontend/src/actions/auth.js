@@ -5,7 +5,8 @@ import {
     USER_LOADED,
     AUTH_ERROR,
     LOGIN_FAIL,
-    LOGIN_SUCCESS
+    LOGIN_SUCCESS,
+    LOGOUT_SUCCESS
 } from './Actiontypes'
 
 
@@ -60,6 +61,23 @@ export const login = (username, password) => dispatch => {
       dispatch({
         type: LOGIN_FAIL
       });
+    });
+};
+
+
+// LOGOUT USER
+export const logout = () => (dispatch, getState) => {
+  axios
+    .post("http://127.0.0.1:8000/account/api/v1/auth/logout", null, tokenConfig(getState))
+    .then(res => {
+      //dispatch({ type: 'CLEAR_LEADS' });
+      dispatch({
+        type: LOGOUT_SUCCESS
+      });
+    })
+    .catch(err => {
+        console.log(err)
+      //dispatch(returnErrors(err.response.data, err.response.status));
     });
 };
 
