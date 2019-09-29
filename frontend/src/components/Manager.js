@@ -1,13 +1,11 @@
-import React, {useEffect, useState} from 'react'
-import {useSelector, useDispatch} from 'react-redux'
-import {loadOrder} from '../actions/order'
+import React from 'react'
+import {useSelector} from 'react-redux'
 import {Redirect} from 'react-router-dom'
 import {Loading} from './Loading'
 import ManagerView from './ManagerView'
 
 function Manager() {
 
-    const dispatch = useDispatch();
     const isAuth = useSelector(state => ({
         auth: state.auth
     }))

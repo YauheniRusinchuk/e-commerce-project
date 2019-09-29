@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import {Redirect} from 'react-router-dom'
 import {useSelector,useDispatch} from 'react-redux'
-import {loadOrder} from '../actions/order'
+import OrderView from './OrderView'
 import {logout} from '../actions/auth'
 
 
@@ -20,13 +20,14 @@ function ManagerView({user}) {
 
     const isAuth = useSelector(state => ({
         auth: state.auth,
+        orders: state.orders,
     }))
 
 
     return (
         <div className='managerview'>
             {isLogout && <Redirect to='/' />}
-            <p>COMPLITE USER</p>
+            {isAuth.orders.orders.length ? <OrderView orders={isAuth.orders.orders}  /> : <p>НЕТ ЗАКАЗОВ</p>}
             <button onClick={logountHandle} >ВЫЙТИ</button>
         </div>
     )
