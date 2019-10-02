@@ -367,3 +367,24 @@ body {
 .manager_container {
     text-align: center;
 }
+
+.order_view {
+    width: 70%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #e6e6e6;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order_view p {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.order_view p span {
+    color: green;
+    font-size: 16px;
+}

@@ -6,8 +6,12 @@ function OrderView({orders}) {
             {orders.map(order => {
                 return (
                     <div key={order.id} className='order_view'>
-                        <p>{order.who}</p>
-                        <span>{order.price}</span>
+                        <p>Номер заказа : <span>{order.id}</span></p>
+                        <p>Имя заказчика : <span>{order.who}</span></p>
+                        <p>Контакт : <span>{order.contact}</span></p>
+                        <p>Цена : <span>{order.price}</span></p>
+                        <p>Статус : <span>{order.status}</span></p>
+                        <button>удалить</button>
                     </div>
                 )
             })}
